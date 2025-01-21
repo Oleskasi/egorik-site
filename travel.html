@@ -157,13 +157,12 @@
             background-color: #007bff;
         }
         
-        /* Стили для мобильных устройств */
         .menu-toggle {
-            display: none; /* Скрываем чекбокс */
+            display: none; 
         }
         
         .menu-icon {
-            display: none; /* Скрываем иконку меню по умолчанию */
+            display: none; 
             flex-direction: column;
             cursor: pointer;
         }
@@ -175,7 +174,7 @@
             margin: 3px 0;
         }
     
-        /* Медиа-запросы */
+    
         @media (max-width: 768px) {
             a{
                 color: rgb(119, 100, 241);
@@ -183,29 +182,28 @@
                 text-shadow: 1px 1px 1px black;
             }
             .nav-links {
-                display: none; /* Скрываем меню по умолчанию */
+                display: none; 
                 flex-direction: column;
                 width: 100%;
                 background-color: #b1b1b1;
                 position: absolute;
-                top: 60px; /* Позиция под навигационной панелью */
+                top: 60px;
                 left: 0;
                 z-index: 1;
             }
         
             .nav-links li {
                 margin-left: 0;
-                text-align: center; /* Центрируем текст */
-                padding: 10px 0; /* Добавляем отступы */
+                text-align: center; 
+                padding: 10px 0; 
             }
         
             .menu-icon {
-                display: flex; /* Показываем кнопку гамбургера */
+                display: flex; 
             }
         
-            /* Показываем меню, когда чекбокс отмечен */
             #menu-toggle:checked + .menu-icon + .nav-links {
-                display: flex; /* Показываем меню при активном состоянии */
+                display: flex; 
             }
         }
         .logo a{

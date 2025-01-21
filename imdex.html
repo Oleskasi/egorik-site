@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аристов Егор Дмитриевич - Спортсмен</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #fff;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        header {
+            background: rgba(182, 207, 250, 0.8);
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 150px 150px;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #560773;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2 {
+            color: #333;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.803), 
+            1px 1px 2px rgb(255, 255, 255)
+            ;
+        }
+        p {
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background: rgba(0, 123, 255, 0.1);
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        ul li:hover {
+            background: rgba(0, 123, 255, 0.3);
+        }
+       
+        li, p{
+            color: #797979;
+        }
+        @media (min-width: 600px) {
+            .profile {
+                flex-direction: row; 
+            }
+            .profile img {
+                margin-bottom: 0; 
+                margin-right: 20px; 
+            }
+            nav {
+                display: flex;
+                justify-content: center;
+            }
+            h2{
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 1600px) {
+            .container {
+                width: 80%; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="profile">
+        <img src="IMG_20250115_173243_107.jpg" alt="Фото Егора Дмитриевича">
+        <h1>Аристов Егор Дмитриевич</h1>
+    </div>
+    <nav>
+        <a href="sport.html" target="_blank">спорт</a>
+        <a href="travel.html" target="_blank">путешествия</a>
+        <a href="gallery.html" target="_blank">Фотогалерея</a>
+        <a href="imdex.html" target="_blank"></a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 id="about">О себе</h2>
+    <p>Занимаюсь футболом и зачислен в списках юношеской сборной России. Имею звание кандидата в мастера спорта.</p>
+    
+    <h2 id="achievements">Достижения</h2>
+    <ul>
+        <li>Выиграл первенство России по футболу и футзалу.</li>
+        <li>Чемпион Московской области.</li>
+        <li>Играю в сборной Московской области.</li>
+        <li>Чемпион всероссийской олимпиады.</li>
+        <li>Лучший игрок олимпиады до 18 лет.</li>
+    </ul>
+
+    <h2 id="education">Образование</h2>
+    <p>Учусь в спортивном колледже, где получаю знания по физической культуре и спорту.</p>
+
+    <h2 id="hobbies">Увлечения</h2>
+    <p>Люблю путешествовать. За свою жизнь я 12 раз летал за границу.</p>
+    <p>Люблю гулять и играть в футбол</p>
+    <p>Прилежная учёба</p>
+</div>
+
+
+</body>
+</html>

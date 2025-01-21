@@ -1,0 +1,400 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Слайдер изображений</title>
+    <link rel="stylesheet" >
+</head>
+<body>
+
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 2s;
+}
+
+.slider {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    max-width: 90%;
+    overflow: hidden;
+}
+
+.slides {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+    opacity: 1;
+}
+
+.next {
+    right: 10px;
+    opacity: 1;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .prev, .next {
+        opacity: 0.3;
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+header {
+    background: rgba(103, 130, 177, 0.8);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 150px 150px;
+}
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+nav {
+    margin: 20px 0;
+}
+nav a {
+    color: #560773;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 20px;
+    background: rgba(247, 255, 164, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+h1, h2 {
+    color: #333;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.803), 
+    1px 1px 2px rgb(255, 255, 255)
+    ;
+}
+p {
+    line-height: 1.6;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+ul li {
+    background: rgba(0, 123, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+ul li:hover {
+    background: rgba(0, 123, 255, 0.3);
+}
+
+li, p{
+    color: #797979;
+}
+@media (min-width: 600px) {
+    .profile {
+        flex-direction: row; 
+    }
+    .profile img {
+        margin-bottom: 0; 
+        margin-right: 20px; 
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+    }
+    h2{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        width: 80%; 
+    }
+}
+       .page-title {
+text-align: center;
+}
+.slider-container {
+position: relative;
+width: 600px;
+height: 400px;
+margin: 0 auto;
+overflow: hidden;
+}
+
+.slider {
+display: flex;
+transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.prev-button,
+.next-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 50px;
+height: 50px;
+background-color: transparent;
+border: none;
+font-size: 24px;
+color: white;
+}
+
+.prev-button {
+left: 10px;
+}
+
+.next-button {
+right: 10px;
+}
+img{
+border-radius: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+.navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin: 0;
+    background: #333;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(175, 173, 173);
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #007bff;
+}
+
+/* Стили для мобильных устройств */
+.menu-toggle {
+    display: none; /* Скрываем чекбокс */
+}
+
+.menu-icon {
+    display: none; /* Скрываем иконку меню по умолчанию */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    a{
+        color: rgb(119, 100, 241);
+        text-decoration: none;
+        text-shadow: 1px 1px 1px black;
+    }
+    .nav-links {
+        display: none; /* Скрываем меню по умолчанию */
+        flex-direction: column;
+        width: 100%;
+        background-color: #b1b1b1;
+        position: absolute;
+        top: 60px; /* Позиция под навигационной панелью */
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        text-align: center; /* Центрируем текст */
+        padding: 10px 0; /* Добавляем отступы */
+    }
+
+.menu-icon {
+        display: flex; /* Показываем кнопку гамбургера */
+    }
+
+    /* Показываем меню, когда чекбокс отмечен */
+    #menu-toggle:checked + .menu-icon + .nav-links {
+        display: flex; /* Показываем меню при активном состоянии */
+    }
+}
+.logo a{
+    color: rgb(119, 100, 241);
+    text-decoration: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+
+</style>
+
+
+
+
+<nav class="navbar">
+<div class="logo"><a target="_blank" href="https://oleskasi.github.io/egot/">Egor.com</a></div>
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-icon">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</label>
+<ul class="nav-links">
+    <li><a href="index.html">Главная</a></li>
+    <li><a href="gallery.html">Галерея</a></li>
+    <li><a href="sport.html">Карьера</a></li>
+    <li><a href="travel.html">Путешествия</a></li>
+</ul>
+</nav>
+</div>
+
+
+
+
+
+<div class="slider">
+    <div class="slides">
+        <div class="slide active">
+            <img src="photo_2024-10-23_17-52-42.jpg" alt="Изображение 1">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-10-23_17-52-35.jpg" alt="Изображение 2">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-10-23_17-52-29.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-10-07_11-11-44.jpg"Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-12_22-14-28.jpg"Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-12_22-12-36.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-11_17-14-27.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-11_10-27-12.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-06_15-14-32.jpg"Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="photo_2024-09-06_15-14-36.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="IMG_20250115_185940_446.jpg" alt="Изображение 3">
+        </div>
+       
+        <div class="slide">
+            <img src="IMG_20250115_185903_408.jpg" alt="Изображение 3">
+        </div>
+        <div class="slide">
+            <img src="IMG_20250115_173416_755.jpg" alt="Изображение 3">
+        </div>
+        
+    </div>
+    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

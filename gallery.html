@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Слайдер изображений</title>
-    <link rel="stylesheet" >
 </head>
 <body>
 
 
 <style>
-    body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    animation: fadeIn 2s;
-}
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #ffffff;
+            animation: fadeIn 2s;
+        }
+
+        
+
 
 .slider {
     display: block;
@@ -58,11 +63,13 @@
 .prev {
     left: 10px;
     opacity: 1;
+    background-color: #9b9b9b;
 }
 
 .next {
     right: 10px;
     opacity: 1;
+    background-color: #9b9b9b;
 }
 
 /* Стили для мобильных устройств */
@@ -119,7 +126,7 @@ nav a:hover {
     margin: 20px auto;
     overflow: hidden;
     padding: 20px;
-    background: rgba(247, 255, 164, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
@@ -320,6 +327,21 @@ body {
 }
 
 
+h2 {
+            color: #007bff;
+            margin-top: 30px;
+            font-size: 2.5em;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+        }
+
+
+
+
 
 </style>
 
@@ -344,55 +366,58 @@ body {
 </div>
 
 
+<div class="container">
+    <h2>Фотки</h2>
+    <p> здесь я собрал кучу моих фоток с соревнований и с моих путешествий, можете заценить</p>
 
-
-
-<div class="slider">
-    <div class="slides">
-        <div class="slide active">
-            <img src="photo_2024-10-23_17-52-42.jpg" alt="Изображение 1">
+    <div class="slider">
+        <div class="slides">
+            <div class="slide active">
+                <img src="photo_2024-10-23_17-52-42.jpg" alt="Изображение 1">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-10-23_17-52-35.jpg" alt="Изображение 2">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-10-23_17-52-29.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-10-07_11-11-44.jpg"Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-12_22-14-28.jpg"Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-12_22-12-36.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-11_17-14-27.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-11_10-27-12.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-06_15-14-32.jpg"Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="photo_2024-09-06_15-14-36.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="IMG_20250115_185940_446.jpg" alt="Изображение 3">
+            </div>
+           
+            <div class="slide">
+                <img src="IMG_20250115_185903_408.jpg" alt="Изображение 3">
+            </div>
+            <div class="slide">
+                <img src="IMG_20250115_173416_755.jpg" alt="Изображение 3">
+            </div>
+            
         </div>
-        <div class="slide">
-            <img src="photo_2024-10-23_17-52-35.jpg" alt="Изображение 2">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-10-23_17-52-29.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-10-07_11-11-44.jpg"Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-12_22-14-28.jpg"Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-12_22-12-36.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-11_17-14-27.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-11_10-27-12.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-06_15-14-32.jpg"Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="photo_2024-09-06_15-14-36.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="IMG_20250115_185940_446.jpg" alt="Изображение 3">
-        </div>
-       
-        <div class="slide">
-            <img src="IMG_20250115_185903_408.jpg" alt="Изображение 3">
-        </div>
-        <div class="slide">
-            <img src="IMG_20250115_173416_755.jpg" alt="Изображение 3">
-        </div>
-        
+        <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+        <button class="next" onclick="plusSlides(1)">&#10095;</button>
     </div>
-    <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
-    <button class="next" onclick="plusSlides(1)">&#10095;</button>
+
 </div>
 
 <script src="script.js"></script>

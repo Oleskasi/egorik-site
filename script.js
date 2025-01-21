@@ -17,11 +17,7 @@ function showSlides(n) {
 
     slides[slideIndex].style.display = "block";  
 }
-
-// Функции для переключения слайдов
 function plusSlides(n) {
     showSlides(slideIndex + n);
 }
-
-// Инициализация слайдера
 showSlides(slideIndex);
